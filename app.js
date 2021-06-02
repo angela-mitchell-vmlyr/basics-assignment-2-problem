@@ -1,19 +1,19 @@
 const app = Vue.createApp({
     data() {
         return {
-            inputOne: '',
-            inputTwo: ''
+            userInput: '',
+            confirmedInput: ''
         }
     },
     methods: {
         showAlert() {
             alert('Hello from the Vue app!');
         },
-        registerInputOne(event) {
-            this.inputOne = event.target.value;
+        saveInput(event) {
+            this.userInput = event.target.value;
         },
-        registerInputTwo(event) {
-            this.inputTwo = event.target.value;
+        confirmInput() {
+            this.confirmedInput = this.userInput;
         }
     }
 });
